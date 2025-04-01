@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clue SAO</title>
+    <script src="../src/game.js" type="module" defer></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div style="display:none;">
+        <img
+          id="board_bkg"
+          src="../assets/board/zc8y68ykb8x41.webp"/>
+      </div>
+    <div id="game_wrapper">
+      <div class="popup" id="ask_ui">
+        <div class="popup-content">
+          <h1>Suggest a suspect and weapon</h1>
+          <div class="card_picker" id="ask_card_picker">
+            <h2>Room:</h2>
+            <div id="ask_room_card" class="card_div"></div>
+            <div id="ask_div">
+              <h2>Select a suspect:</h2>
+              <div id="ask_character" class="card_div"></div>
+              <h2>Select a murder weapon:</h2>
+              <div id="ask_weapon" class="card_div"></div>
+            </div>
+          </div>
+          <div class="popup_buttons">
+            <button id="confirm_ask" class="action_button">Ask!</button>
+            <button id="cancel_ask" class="action_button">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup" id="answer_ui">
+        <div class="popup-content">
+          <h1 id="answer_h1"></h1>
+          <div class="card_picker" id="answer_card_picker">
+            <div id="answer_cards" class="card_div"></div>
+          </div>
+          <div class="popup_buttons">
+            <button id="confirm_answer" class="action_button">Confirm</button>
+            <button id="cancel_answer" class="action_button">Cancel</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="character_selection"></div>
+      <div id="board"></div>
+      <div id="ui">
+        <div class="ui_div">
+          <button id="start_game" type="button">Start game</button>
+        </div>
+        <div id="dice_display">
+        </div>
+        <div id="cards">
+        </div>
+        <div id="buttons" class="ui_div">
+          <div>
+            <button id="ROLL_DICE" class="action_button" type="button">Roll the dice!</button>
+            <button id="ASK" class="action_button" type="button">Ask</button>
+            <button id="ACCUSE" class="action_button" type="button">Accuse</button>
+          </div>
+          <div>
+            <button id="WALK" class="action_button" type="button">Confirm position</button>
+          </div>
+          <div>
+            <button id="END_PLAY" class="action_button" type="button">End turn</button>
+          </div>
+        </div>
+      </div>
+      <div id="log">
+      </div>
+    </div>
+  </body>
+</html>
